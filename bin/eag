@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "edr_activity"
+# require_relative "../lib/edr_activity"
+require "active_support"
+
+if ARGV[0].nil?
+  puts <<~ERROR
+    You must supply a configuration file for the activity generator.
+      syntax: eag <path to config file>
+  ERROR
+
+  exit 1
+end
