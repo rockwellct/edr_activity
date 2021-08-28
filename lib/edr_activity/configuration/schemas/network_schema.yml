@@ -1,0 +1,13 @@
+---
+uri: tag:runner-network
+schema:
+  type: "//rec"
+  required:
+    address: "//str"
+    message: "//str"
+    port:
+      type: "//any"
+      of:
+        - "//str"
+        - "//int"
+    protocol: "//str"

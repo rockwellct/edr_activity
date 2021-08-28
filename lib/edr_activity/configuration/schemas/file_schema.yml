@@ -1,0 +1,8 @@
+---
+uri: tag:runner-file
+schema:
+  type: "//rec"
+  required:
+    path: "//str"
+    count: "//int"
+    extension: "//str"

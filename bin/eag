@@ -13,3 +13,5 @@ if ARGV[0].nil?
 
   exit 1
 end
+
+config = EdrActivity::Configuration.load(ARGV[0])

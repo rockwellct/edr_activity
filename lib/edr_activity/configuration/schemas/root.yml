@@ -1,0 +1,22 @@
+---
+type: "//rec"
+required:
+  output:
+    type: "//rec"
+    required:
+      path: "//str"
+      format: "//str"
+  runners:
+    type: "//rec"
+    required:
+      process:
+        type: "//arr"
+        contents: "tag:runner-process"
+        length:
+          min: 1
+      file: "tag:runner-file"
+      network:
+        type: "//arr"
+        contents: "tag:runner-network"
+        length:
+          min: 1

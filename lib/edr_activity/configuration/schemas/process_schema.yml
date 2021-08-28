@@ -1,0 +1,10 @@
+---
+uri: tag:runner-process
+schema:
+  type: "//rec"
+  required:
+    command: "//str"
+  optional:
+    arguments:
+      type: "//arr"
+      contents: "//str"

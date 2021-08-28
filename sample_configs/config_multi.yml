@@ -1,0 +1,22 @@
+output:
+  path: "tmp"
+  format: json
+runners:
+  process:
+    - command: "echo"
+      arguments:
+        - "hiya buddy"
+    - command: "date"
+  file:
+    path: "tmp/filez"
+    count: 1
+    extension: ".log"
+  network:
+    - address: "127.0.0.1"
+      port: 443
+      protocol: "udp"
+      message: "Hello from us"
+    - address: "127.0.0.1"
+      port: 22
+      protocol: "tcp"
+      message: "Hello from us"
