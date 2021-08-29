@@ -28,7 +28,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   # runtime gems
   spec.add_runtime_dependency "activesupport", "~> 6.1"
+  spec.add_runtime_dependency "log_formatter", "~> 0.8"
   spec.add_runtime_dependency "rxrb", "~> 0.1"
+  spec.add_runtime_dependency "sys-proctable", "~> 1.2"
   # development gems
   spec.add_development_dependency "pry", "~> 0.14.1"
 end

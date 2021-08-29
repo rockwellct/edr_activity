@@ -15,3 +15,4 @@ if ARGV[0].nil?
 end
 
 config = EdrActivity::Configuration.load(ARGV[0])
+gen = EdrActivity::Generator.run(config.current)
