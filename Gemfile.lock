@@ -1,0 +1,45 @@
+PATH
+  remote: .
+  specs:
+    edr_activity (0.1.0)
+      activesupport (~> 6.1)
+      log_formatter (~> 0.8)
+      rxrb (~> 0.1)
+      sys-proctable (~> 1.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (6.1.4.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    coderay (1.1.3)
+    concurrent-ruby (1.1.9)
+    ffi (1.15.3)
+    i18n (1.8.10)
+      concurrent-ruby (~> 1.0)
+    log_formatter (0.8.2)
+    method_source (1.0.0)
+    minitest (5.14.4)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rxrb (0.1.0)
+    sys-proctable (1.2.6)
+      ffi
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.4.2)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  edr_activity!
+  pry (~> 0.14.1)
+
+BUNDLED WITH
+   2.2.22

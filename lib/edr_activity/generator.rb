@@ -29,6 +29,7 @@ module EdrActivity
     def run_all
       EdrActivity::Runner::Process.run(process_config)
       EdrActivity::Runner::File.run(file_config)
+      EdrActivity::Runner::Network.run(network_config)
     end
   end
 end
