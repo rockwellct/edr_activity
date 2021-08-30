@@ -27,6 +27,7 @@ module EdrActivity
     end
 
     def run_all
+      EdrActivity::Runner::Process.run(process_config)
     end
   end
 end
