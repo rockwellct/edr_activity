@@ -22,7 +22,7 @@ module EdrActivity
         config[:app] = false
       end
 
-      @@active_logger = @logger
+      @@active_logger = self
     end
 
     def self.active
