@@ -12,8 +12,10 @@ module EdrActivity
     def initialize(log_path:)
       FileUtils.mkdir_p(log_path)
       file_name = "action_log_#{Time.now.strftime('%Y-%m-%d-%H-%M-%S')}.json"
+      file_path = File.join(log_path, file_name)
+      FileUtils.touch(file_path)
 
-      @logger = ::Logger.new(File.join(log_path, file_name))
+      @logger = ::Logger.new(file_path)
       @logger.level = ::Logger::DEBUG
 
       @logger.formatter = Ruby::JSONFormatter::Base.new do |config|
@@ -31,11 +33,21 @@ module EdrActivity
       @@active_logger
     end
 
-    def info(process_id: Process.pid, **kwargs)
+    def build_message(process_id: Process.pid, **kwargs)
+      kwargs.merge(
+        process_info(process_id: process_id)
+      )
+    end
+
+    def filename
+      logger
+        .instance_variable_get("@logdev")
+        .instance_variable_get("@filename")
+    end
+
+    def info(...)
       logger.info(
-        kwargs.merge(
-          process_info(process_id: process_id)
-        )
+        build_message(...)
       )
     end
 

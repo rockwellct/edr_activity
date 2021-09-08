@@ -7,8 +7,9 @@ module EdrActivity
       :network_config
 
     def self.run(config)
-      generator = new(config)
-      generator.run_all
+      new(config).tap do |generator|
+        generator.run_all
+      end
     end
 
     def initialize(config)
@@ -20,6 +21,15 @@ module EdrActivity
       end
 
       EdrActivity::Logger.new(log_path: config["output"]["path"])
+    end
+
+    def activity_count
+      # Number of processes we'll spawn
+      Array.wrap(process_config).length +
+      # Number of network connections we'll make
+      Array.wrap(network_config).length +
+      # Number of file operations (files * 3)
+      (file_config["count"] * 3)
     end
 
     def logger

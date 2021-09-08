@@ -9,7 +9,7 @@ runners:
     - command: "date"
   file:
     path: "tmp/filez"
-    count: 2
+    count: 1
     extension: ".log"
   network:
     - address: "127.0.0.1"

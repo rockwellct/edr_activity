@@ -33,4 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "sys-proctable", "~> 1.2"
   # development gems
   spec.add_development_dependency "pry", "~> 0.14.1"
+  spec.add_development_dependency "rspec", "~> 3.10"
+  spec.add_development_dependency "jsonl", "~> 0.1.5"
 end
